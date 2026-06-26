@@ -16,8 +16,8 @@ import java.security.Principal;
 @PreAuthorize("isAuthenticated()")
 public class ProfileController
 {
-    private ProfileService profileService;
-    private UserService userService;
+    private final ProfileService profileService;
+    private final UserService userService;
 
     @Autowired
     public ProfileController(ProfileService profileService, UserService userService)
